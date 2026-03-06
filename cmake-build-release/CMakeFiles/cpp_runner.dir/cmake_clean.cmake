@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/cpp_runner.dir/examples/main.cpp.o"
+  "CMakeFiles/cpp_runner.dir/examples/main.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/examples/playground.cpp.o"
+  "CMakeFiles/cpp_runner.dir/examples/playground.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Allocator.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Allocator.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Dispatcher.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Dispatcher.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Heatmap.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Heatmap.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Logger.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Logger.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Registry.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Registry.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Storage.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Storage.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/Tile.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/Tile.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileFactories.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileFactories.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileKernelsCpu.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileKernelsCpu.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileKernelsGpu.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileKernelsGpu.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileMath.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileMath.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileOperator.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileOperator.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileReductions.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileReductions.cpp.o.d"
+  "CMakeFiles/cpp_runner.dir/src/TileTransformations.cpp.o"
+  "CMakeFiles/cpp_runner.dir/src/TileTransformations.cpp.o.d"
+  "cpp_runner"
+  "cpp_runner.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/cpp_runner.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

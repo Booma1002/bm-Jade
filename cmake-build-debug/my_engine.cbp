@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="my_engine"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_engine">
+				<Option output="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/libmy_engine.pyd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Booma/CLionProjects/CppForML/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 my_engine"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_engine/fast">
+				<Option output="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/libmy_engine.pyd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Booma/CLionProjects/CppForML/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 my_engine/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp_runner">
+				<Option output="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/cpp_runner" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Booma/CLionProjects/CppForML/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpp_runner"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp_runner/fast">
+				<Option output="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/cpp_runner" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Booma/CLionProjects/CppForML/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpp_runner/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/bindings/bindings.cpp">
+			<Option target="my_engine"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/examples/main.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/examples/playground.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/include/header/Engine.hpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/include/header/Heatmap.hpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/include/header/Logger.hpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/include/temp/TileFactories.tpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/include/temp/TileTransformations.tpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Allocator.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Dispatcher.cpp">
+			<Option target="my_engine"/>
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Heatmap.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Logger.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Registry.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Storage.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/Tile.cpp">
+			<Option target="my_engine"/>
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileFactories.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileKernelsCpu.cpp">
+			<Option target="my_engine"/>
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileKernelsGpu.cpp">
+			<Option target="my_engine"/>
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileMath.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileOperator.cpp">
+			<Option target="my_engine"/>
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileReductions.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/src/TileTransformations.cpp">
+			<Option target="cpp_runner"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Booma/CLionProjects/CppForML/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

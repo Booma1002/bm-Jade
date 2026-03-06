@@ -1,0 +1,4 @@
+/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-release/CMakeFiles/my_engine.dir
+/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-release/CMakeFiles/cpp_runner.dir
+/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-release/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Booma/CLionProjects/CppForML/cmake-build-release/CMakeFiles/rebuild_cache.dir
