@@ -15,8 +15,8 @@ namespace bm {
     struct Dispatcher;
 
     /**
-     * @brief Exception thrown when jade dimensions or ranks are incompatible for an operation.
-     * Usually triggered during binary operations, broadcasting attempts, or matrix multiplications
+     * @brief Exception thrown when jade dimensions or ranks are incompatible for an reaction.
+     * Usually triggered during binary reactions, broadcasting attempts, or matrix multiplications
      * where the underlying algebraic rules or loop bounds are violated.
      */
     class ShapeMismatchException : public std::exception {
@@ -193,7 +193,7 @@ namespace bm {
     * @brief Explicit metadata constructor for creating advanced views.
     * Directly injects pre-calculated metadata arrays.
     * @usage Used internally by slicing
-    * and advanced padding operations.
+    * and advanced padding reactions.
     * @warning Assumes ownership of the `unique_ptr` metadata arrays.
     * @param new_shape Managed array of the new logical shape.
     * @param new_stride Managed array of the new logical strides.
@@ -215,7 +215,7 @@ namespace bm {
      * Allocates a new, zero-initialized jade matching the current logical shape,
      * then dispatches `OpCode::ADD` to the hardware registry.
      * @warning Assumes both jades have exactly matching shapes (broadcasting not dynamically resolved here).
-     * @param other The right-hand operand.
+     * @param other The right-hand reactant.
      * @return A newly allocated jade containing the element-wise sum.
      */
         Jade operator+(const Jade& other) const;
@@ -224,7 +224,7 @@ namespace bm {
     * @brief Element-wise addition dispatcher.
     * Allocates a new, zero-initialized jade, and another val-fill-initialized jade
     * matching the current logical shape, then dispatches `OpCode::ADD` to the hardware registry.
-    * @param val The value of the right operand.
+    * @param val The value of the right reactant.
     * @return A newly allocated jade containing the element-wise sum.
     */
         Jade operator+(const double & val) const;
@@ -233,7 +233,7 @@ namespace bm {
     * @brief Element-wise subtraction dispatcher.
     * Allocates a new, zero-initialized jade, and another val-fill-initialized jade
     * matching the current logical shape, then dispatches `OpCode::ADD` to the hardware registry.
-    * @param val The value of the right operand.
+    * @param val The value of the right reactant.
     * @return A newly allocated jade containing the element-wise difference.
     */
         Jade operator-(const uint64_t & val) const;
@@ -243,7 +243,7 @@ namespace bm {
      * Allocates a new, zero-initialized jade matching the current logical shape,
      * then dispatches `OpCode::SUB` to the hardware registry.
      * @warning Assumes both jades have exactly matching shapes.
-     * @param other The right-hand operand to subtract.
+     * @param other The right-hand reactant to subtract.
      * @return A newly allocated jade containing the element-wise difference.
      */
         Jade operator-(const Jade& other) const;
@@ -256,7 +256,7 @@ namespace bm {
      * shape (Batch..., M, N), allocates a new zero-initialized jade, and dispatches `OpCode::MATMUL`.
      * @throws ShapeMismatchException if trailing dimensions do not align (A.cols != B.rows) or
      * if ranks are strictly less than 2D.
-     * @param other The right-hand jade operand.
+     * @param other The right-hand jade reactant.
      * @return A newly allocated jade containing the matrix product.
      */
         Jade operator*(const Jade &other) const;
@@ -521,10 +521,10 @@ namespace bm {
     * Compares dimensions starting from the trailing (inner-most) dimension.
     * Two dimensions are compatible if they are equal, or if one of them is 1.
     * @throws BroadcastException if the dimensions are mathematically incompatible.
-    * @param A_shape Pointer to the left operand's shape array.
-    * @param A_ndims Rank of the left operand.
-    * @param B_shape Pointer to the right operand's shape array.
-    * @param B_ndims Rank of the right operand.
+    * @param A_shape Pointer to the left reactant's shape array.
+    * @param A_ndims Rank of the left reactant.
+    * @param B_shape Pointer to the right reactant's shape array.
+    * @param B_ndims Rank of the right reactant.
     * @return A managed array containing the finalized broadcasted shape.
     */
         static std::unique_ptr<uint64_t[]> broadcast(uint64_t* A_shape, uint64_t A_ndims, uint64_t* B_shape, uint64_t B_ndims );

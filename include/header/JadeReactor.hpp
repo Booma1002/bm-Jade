@@ -17,23 +17,23 @@ namespace bm {
     class Jade;
 
 /**
- * @brief Exception wrapper specific to the Operator module.
+ * @brief Exception wrapper specific to the Reactor module.
  * Thrown primarily during dispatch failures, such as calling an unbound
  * method ID or exceeding the maximum method limit.
  */
-    class OperatorException : public std::exception {
+    class ReactorException : public std::exception {
         std::string msg;
     public:
-        explicit OperatorException(std::string message) : msg(std::move(message)) {}
+        explicit ReactorException(std::string message) : msg(std::move(message)) {}
 
         [[nodiscard]] const char *what() const noexcept override { return msg.c_str(); }
     };
 
-    enum class OperatorMethod {
+    enum class ReactorMethod {
         ENSURE_CAPACITY = 0,
         CALC_STRIDES = 1,
         RESHAPE = 2,
-        MAX_METHODS [[maybe_unused]] = MAX_OP_METHODS
+        MAX_METHODS [[maybe_unused]] = MAX_RE_METHODS
     };
 
 /**
@@ -55,10 +55,10 @@ namespace bm {
 /**
  * @brief Execution context and dispatcher for jade math kernels.
  * This struct bridges high-level `Jade` objects with low-level compute kernels.
- * It normalizes memory layouts, computes strides across multiple operands,
+ * It normalizes memory layouts, computes strides across multiple reactants,
  * and holds type-erased function pointers (thunks) for lazy evaluation.
  * @note Assumptions:
- * - Maximum dimensions and operands are strictly bounded by `OPER_MAX_DIMS` and `OPER_MAX_OPERANDS`.
+ * - Maximum dimensions and reactants are strictly bounded by `RE_MAX_DIMS` and `RE_MAX_REACTANTS`.
  * - Memory pointers (`phys`) assume data is stored as `DType`.
  */
     struct JadeReactor {
@@ -77,15 +77,15 @@ namespace bm {
         double Left = 0.f;
         double Right = 0.f;
 
-        uint64_t shape[OPER_MAX_DIMS]{};
-        uint64_t strides[OPER_MAX_OPERANDS][OPER_MAX_DIMS]{};
-        void* phys[OPER_MAX_OPERANDS]{};
+        uint64_t shape[RE_MAX_DIMS]{};
+        uint64_t strides[RE_MAX_REACTANTS][RE_MAX_DIMS]{};
+        void* phys[RE_MAX_REACTANTS]{};
     private:
         using GenericFunc = void (*)();
         void *bound_obj = nullptr;
 
     public:
-        GenericFunc methods[MAX_OP_METHODS] = {nullptr};
+        GenericFunc methods[MAX_RE_METHODS] = {nullptr};
 
 ////////////////////////////////////////////////////////////////
 /////////////////********************************///////////////
@@ -100,10 +100,10 @@ namespace bm {
  * * Leverages the `Binder` template specialization to deduce the member function's
  * signature at compile-time and generate a type-erased trampoline (thunk).
  * * @tparam MemberFunc A non-type template parameter pointing to the member function.
- * @param id The target `OperatorMethod` slot in the dispatch table.
+ * @param id The target `ReactorMethod` slot in the dispatch table.
  */
         template<auto MemberFunc>
-        void bind_private(OperatorMethod id);
+        void bind_private(ReactorMethod id);
 
 /**
  * @brief Binds a stateless lambda or free function to an execution ID.
@@ -113,17 +113,17 @@ namespace bm {
  * @warning UB Warning: If the bound function expects a context object, `bound_obj`
  * MUST be manually assigned before `call()` is invoked.
  * @tparam Func Inferred type of the callable.
- * @param id The target `OperatorMethod` slot.
+ * @param id The target `ReactorMethod` slot.
  * @param f The stateless callable to bind.
  * @example
- * oper.bound_obj = &in_out;\n
- * oper.bind(OperatorMethod::ENSURE_CAPACITY, \n
+ * react.bound_obj = &in_out;\n
+ * react.bind(ReactorMethod::ENSURE_CAPACITY, \n
  * +[](void* obj, uint64_t size, double scale, bool f, DType val) {\n
  * static_cast<Jade*>(obj)->ensure_capacity(size, scale, f, val);\n
  * });
  */
         template<typename Func>
-        void bind(OperatorMethod id, Func &&f);
+        void bind(ReactorMethod id, Func &&f);
 
 /**
 * @brief Dispatches the bound function associated with the given ID.
@@ -136,17 +136,17 @@ namespace bm {
 * @param id The execution ID to dispatch.
 * @param args The runtime arguments forwarded to the thunk.
 * @example
-*   oper.call(OperatorMethod::CALC_STRIDES, oper.shape, oper.strides[0], oper.ndims);
+*   react.call(ReactorMethod::CALC_STRIDES, react.shape, react.strides[0], react.ndims);
 */
         template<typename... Args>
-        void call(OperatorMethod id, Args... args);
+        void call(ReactorMethod id, Args... args);
 
         /**
         * @brief Checks if a specific execution ID has an active binding.
-        * @param id The `OperatorMethod` slot to check.
+        * @param id The `ReactorMethod` slot to check.
         * @return true if a function is bound to the slot, false otherwise.
         */
-        [[nodiscard]] constexpr bool has(OperatorMethod id) const;
+        [[nodiscard]] constexpr bool has(ReactorMethod id) const;
 
 /**
  * @brief Generates a type-erased trampoline for member function invocation.
@@ -158,17 +158,17 @@ namespace bm {
  * @tparam MemberPtr The pointer-to-member function.
  * @param id The target dispatch slot.
  * @example
- * static void bind(JadeReactor* op, OperatorMethod id) {\n
+ * static void bind(JadeReactor* op, ReactorMethod id) {\n
  *      op->template create_thunk<T, Args..., MemberFunc>(id);\n
  *  }
  */
         template<typename T, typename... Args, auto MemberPtr>
-        void create_thunk(OperatorMethod id);
+        void create_thunk(ReactorMethod id);
 
 /**
 * @brief Greedily collapses adjacent contiguous dimensions.
-* Analyzes the stride-to-shape ratios across all bound operands. If the memory
-* layout across an inner/outer dimension pair is perfectly sequential for all operands,
+* Analyzes the stride-to-shape ratios across all bound reactants. If the memory
+* layout across an inner/outer dimension pair is perfectly sequential for all reactants,
 * the dimensions are fused.
 */
         void merge_dims();
@@ -181,7 +181,7 @@ namespace bm {
         ;
 
 /**
- * @brief Constructs an execution context for a two-operand jade operation.
+ * @brief Constructs an execution context for a two-reactant jade reaction.
  * Extracts shapes, strides, and physical memory pointers from an output jade
  * and two input jades. It automatically attempts to collapse contiguous dimensions
  * via `merge_dims()` to optimize kernel loop limits.
@@ -192,10 +192,10 @@ namespace bm {
  * @param b The second input jade.
  * @return A configured `JadeReactor` ready for kernel dispatch.
  */
-        static JadeReactor operate_binary(Jade &out, const Jade &a, const Jade &b);
+        static JadeReactor react_binary(Jade &out, const Jade &a, const Jade &b);
 
 /**
- * @brief Constructs an execution context for a single-operand jade operation.
+ * @brief Constructs an execution context for a single-reactant jade reaction.
  * Normalizes strides and memory layouts between an input and output jade.
  * Fuses memory dimensions to treat multi-dimensional contiguous jade as flat 1D arrays
  * where possible, maximizing memory coalescing during kernel execution.
@@ -204,9 +204,9 @@ namespace bm {
  * @param a The source jade.
  * @return A configured `JadeReactor`.
  */
-        static JadeReactor operate_unary(Jade &out, const Jade &a, const double left = 0.f, const double right = 0.f);
+        static JadeReactor react_unary(Jade &out, const Jade &a, const double left = 0.f, const double right = 0.f);
 
-        static JadeReactor operate_scalar(Jade &out, double Val);
+        static JadeReactor react_scalar(Jade &out, double Val);
 
 /**
  * @brief Prepares an execution context for General Matrix Multiplication (GEMM).
@@ -216,11 +216,11 @@ namespace bm {
  * @note Assumptions: The last dimension of `a` is strictly treated as the reduction dimension (`K`).
  * @note Explicitly flags the context as non-contiguous, forcing kernels to rely on stride math.
  * @param out Destination jade for the matrix product.
- * @param a Left operand matrix.
- * @param b Right operand matrix.
+ * @param a Left reactant jade.
+ * @param b Right reactant jade.
  * @return A configured `JadeReactor`.
  */
-        static JadeReactor operate_matmul(Jade &out, const Jade &a, const Jade &b);
+        static JadeReactor react_matmul(Jade &out, const Jade &a, const Jade &b);
     };
 
 /**

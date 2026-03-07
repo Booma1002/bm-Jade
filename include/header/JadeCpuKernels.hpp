@@ -18,15 +18,15 @@ namespace bm {
     ;
 
     template<typename Func>
-    void cpu_elementwise_unary_invoke(JadeReactor &oper, Func op);
+    void cpu_elementwise_unary_invoke(JadeReactor &react, Func op);
 
     template<typename Func>
-    void cpu_elementwise_scalar_invoke(JadeReactor &oper, Func op);
+    void cpu_elementwise_scalar_invoke(JadeReactor &react, Func op);
 
     template<typename Func>
-    void cpu_elementwise_binary_invoke(JadeReactor &oper, Func op);
+    void cpu_elementwise_binary_invoke(JadeReactor &react, Func op);
 
-    void cpu_MatMul_binary_invoke(JadeReactor &oper);
+    void cpu_MatMul_binary_invoke(JadeReactor &react);
 
 
 
@@ -35,31 +35,31 @@ namespace bm {
 // ======================================================
     ;
 
-    void cpu_add_kernel(JadeReactor &op);
+    void cpu_add_kernel(JadeReactor &re);
 
-    void cpu_sub_kernel(JadeReactor &op);
+    void cpu_sub_kernel(JadeReactor &re);
 
-    void cpu_matmul_kernel(JadeReactor &oper);
+    void cpu_matmul_kernel(JadeReactor &re);
 
-    void cpu_copy_kernel(JadeReactor &op);
+    void cpu_copy_kernel(JadeReactor &re);
 
-    void cpu_fill_kernel(JadeReactor &op);
+    void cpu_fill_kernel(JadeReactor &re);
 
-    void cpu_mul_kernel(JadeReactor &op);
+    void cpu_mul_kernel(JadeReactor &re);
 
-    void cpu_mul_kernel(JadeReactor &op);
+    void cpu_mul_kernel(JadeReactor &re);
 
-    void cpu_sin_kernel(JadeReactor &op);
+    void cpu_sin_kernel(JadeReactor &re);
 
-    void cpu_cos_kernel(JadeReactor &op);
+    void cpu_cos_kernel(JadeReactor &re);
 
-    void cpu_tan_kernel(JadeReactor &op);
+    void cpu_tan_kernel(JadeReactor &re);
 
-    void cpu_exp_kernel(JadeReactor &op);
+    void cpu_exp_kernel(JadeReactor &re);
 
-    void cpu_log_kernel(JadeReactor &op);
+    void cpu_log_kernel(JadeReactor &re);
 
-    void cpu_clip_kernel(JadeReactor &oper)
+    void cpu_clip_kernel(JadeReactor &react)
 
 // ===========================================================
 // =========={..........Registration..........}===============

@@ -2,9 +2,9 @@
 #include <cstdint>
 #include "Logger.hpp"
 namespace bm {
-    static constexpr int OPER_MAX_DIMS = 16;
-    static constexpr int OPER_MAX_OPERANDS = 3;
-    constexpr uint64_t MAX_OP_METHODS = 1024;
+    static constexpr int RE_MAX_DIMS = 16;
+    static constexpr int RE_MAX_REACTANTS = 3;
+    constexpr uint64_t MAX_RE_METHODS = 1024;
 
     //////////////////////////////////////////////////////////
     /////////////////**************************///////////////
@@ -33,7 +33,7 @@ namespace bm {
     //////////////////////////////////////////////////////////
     ;
     /**
-     * @brief Specifies the operation being dispatched by the 'Dispatcher'
+     * @brief Specifies the Reaction being dispatched by the 'Dispatcher'
      * @usage To create a new OpCode, manually add it to the enum class 'Opcode',
      * and specify its unique code.
      * @usage Preferably select a sequential code and write it down in 'hex32' format.
