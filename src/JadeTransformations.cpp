@@ -53,7 +53,7 @@ Jade Jade::copy(){
 
 
 Jade& Jade::flatten(){
-
+    return *this;
 };
 
 

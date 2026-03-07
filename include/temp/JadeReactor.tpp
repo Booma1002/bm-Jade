@@ -137,7 +137,7 @@ namespace bm {
         if (react.ndims > 1) react.is_contiguous = false;
 
         msg+= std::format("Shape (");
-        for (int i=0; i < react.ndims; ++i) std::to_string(react.shape[i]) + ((i != react.ndims - 1) ? ", " : "");
+        for (int i=0; i < react.ndims; ++i) msg+= std::to_string(react.shape[i]) + ((i != react.ndims - 1) ? ", " : "");
         msg+= std::format(").\n");
         if(react.ndims) LOG_DEBUG(msg);
         msg= std::format("[Unary Reactor] New ndims: {}.", std::to_string(react.ndims));
