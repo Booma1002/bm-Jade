@@ -10,6 +10,7 @@ void see(Jade& t, std::string msg =""){
 }
 
 int main(){
+    LOG_INFO("[Engine] Initiating Bare Metal (BM) Ignition Sequence...");
     watching.store(0, std::memory_order_relaxed);
     Jade a(DType::UINT64, 7000, 100, 10, 10);
     bm::Jade b =a;
@@ -34,4 +35,5 @@ int main(){
     uint64_t z;
     auto x = static_cast<decltype(z)>(y);
     std::cout << x;
+
 }
