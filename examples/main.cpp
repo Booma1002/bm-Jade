@@ -1,58 +1,51 @@
 #include "header/Engine.hpp"
+#include <chrono>
+
 using namespace bm;
 
-std::atomic_uint64_t watching;
-void see(Jade& t, std::string msg =""){
-    std::cout << std::format("\n\n{:x}) {}:-\n",
-             watching.load(std::memory_order::relaxed), msg);
-    watching.fetch_add(1, std::memory_order_relaxed);
-    t.display(2, 10);
-}
-
-int main(){
-    LOG_INFO("[Engine] Initiating Bare Metal (BM) Ignition Sequence...");
-    watching.store(1, std::memory_order_relaxed);
+int main() {
+    LOG_INFO("[Thermal Throttler] Initiating Core Meltdown Sequence...");
     Jade::set_seed(42);
-    bm::Jade Ar = Jade::arange(DType::FLOAT64, Slice(111, 10, -5));
-    see(Ar, "bm::Jade Ar = Jade::arange(DType::FLOAT64, Slice(111, 10, -5));");
-    auto a = Jade::randint(DType::FLOAT64, -3, 0,   4,4);
-    see(a, "auto a = Jade::randint(DType::FLOAT64, -3, 0,   4,4);");
-    auto b = Jade::rand(DType::FLOAT64, 4,4);
-    see(b, "auto b = Jade::rand(DType::FLOAT64, 4,4);");
-    auto c = Jade::randn(DType::FLOAT64, 4,4);
-    see(c, "auto c = Jade::randn(DType::FLOAT64, 4,4);");
-    c.seed(15);
-    c = Jade::array(DType::FLOAT64, 2,4)
-            = {1, 2, 3, 4,
-               4, 3, 2, 1};
-    see(c, "c.seed(15);\n"
-           "    c = Jade::array(DType::FLOAT64, 2,4)\n"
-           "            = {1, 2, 3, 4,\n"
-           "               4, 3, 2, 1};");
-    Jade c_copy = c;
-    c.flatten();
-    see(c, "c.flatten();");
 
-    // zeros ones test
-    Jade zeros = Jade::zeros(DType::UINT8, 7, 7);
-    see(zeros,"zeros");
-    Jade ones = Jade::ones(DType::UINT8, 7, 7);
-    see(ones,"ones");
-    auto res_max = Jade::max(a);
-    std::cout << "\nMax Value: " << res_max.item<double>() << "\n";
+    auto start_time = std::chrono::high_resolution_clock::now();
+    double running_sum = 0.0;
 
-    auto res_min = Jade::min(a);
-    std::cout << "Min Value: " << res_min.item<double>() << "\n";
+    // 50 Epochs of absolute brutality
+    for (int epoch = 1; epoch <= 50; ++epoch) {
+        std::cout << "[Epoch " << epoch << "/50] Igniting 8-Billion Op GEMM..." << std::flush;
+        auto ep_start = std::chrono::high_resolution_clock::now();
 
-    auto res_mean = Jade::mean(a);
-    std::cout << "Mean Value: " << res_mean.item<double>() << "\n";
+        // 1. Allocate 3 massive dense blocks (~100MB of pure double-precision data)
+        // This tests your Allocator's ability to cleanly map and unmap large contiguous pages.
+        Jade W = Jade::randn(DType::FLOAT64, 2048, 2048);
+        Jade X = Jade::randn(DType::FLOAT64, 2048, 2048);
+        Jade b = Jade::randn(DType::FLOAT64, 2048);
 
-    auto res_argmax = Jade::argmax(a);
-    std::cout << "Argmax Index: " << res_argmax.item<uint64_t>() << "\n"; // Extracted perfectly as a uint64_t
+        // 2. The $O(N^3)$ GEMM Grinder. 2048^3 = 8.5 Billion operations per loop.
+        Jade Z = W.dot(X);
 
-    auto res_argmin = Jade::argmin(a);
-    std::cout << "Argmin Index: " << res_argmin.item<uint64_t>() << "\n";
-    auto res = b.dot(a);
-    see(res,"dot");
+        // 3. Strided Broadcasting Stress
+        // Broadcast a (2048) vector across a (2048, 2048) matrix.
+        Z += b;
 
+        // 4. Memory Bending & Map Operations
+        // Force the threads to read the massive matrix, compute heavy transcendental math,
+        // and write it back out.
+        Jade activations = Jade::std(Z); // Arbitrary heavy reduction
+        Jade clipped = Jade::max(activations);
+
+        running_sum += clipped.item<double>();
+
+        auto ep_end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> ep_diff = ep_end - ep_start;
+        std::cout << " Completed in " << ep_diff.count() << "s. Checksum: " << running_sum << "\n";
+
+        // Scope ends here. W, X, b, Z, activations, and clipped all drop their shared_ptrs.
+        // If your destructor or allocator is flawed, this loops leaks ~150MB per tick and will OOM kill your machine in seconds.
+    }
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> diff = end_time - start_time;
+    std::cout << "\n[SURVIVED] Total Execution Time: " << diff.count() << " seconds.\n";
+    std::cout << "If your PC didn't shut down, your engine is bulletproof.\n";
 }
