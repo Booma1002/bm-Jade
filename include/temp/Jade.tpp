@@ -149,11 +149,6 @@ namespace bm {
 
     template<typename... Indices>
     double Jade::get(Indices... indices) const {
-        if (sizeof...(Indices) != ndims) {
-            std::string msg = "Number of indices must match Jade rank.";
-            LOG_ERR(msg);
-            throw ShapeMismatchException(msg);
-        }
         uint64_t IDX = 0;
         size_t id = 0;
         ((IDX += indices * strides[id++]), ...);
@@ -162,11 +157,6 @@ namespace bm {
 
     template<typename... Indices>
     void Jade::set(const double val, Indices... indices) {
-        if (sizeof...(Indices) != ndims) {
-            std::string msg = "Number of indices must match Jade rank.";
-            LOG_ERR(msg);
-            throw ShapeMismatchException(msg);
-        }
         uint64_t IDX = 0;
         size_t id = 0;
         ((IDX += indices * strides[id++]), ...);

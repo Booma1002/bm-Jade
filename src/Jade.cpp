@@ -89,7 +89,7 @@ std::unique_ptr<uint64_t[]> Jade:: broadcast(uint64_t* A_shape, uint64_t A_ndims
     Jade::reverse(shape1.get(), A_ndims);
     Jade::reverse(shape2.get(), B_ndims);
 
-    auto max_dims = std::max((uint64_t)2ull, std::max(B_ndims, A_ndims));
+    auto max_dims = std::max(B_ndims, A_ndims);
     auto shape_out = std::make_unique<uint64_t[]>(max_dims);
     uint64_t i =0;
     for (uint64_t dim = 0; dim <max_dims; ++dim){

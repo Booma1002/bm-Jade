@@ -56,31 +56,25 @@ Jade Jade::operator*(const Jade &other) const{
         throw ShapeMismatchException(msg);
     }
 
-    auto sh = std::make_unique<uint64_t[]>(2);
-    std::optional<Jade> ths = std::nullopt;
+    Jade a = *this;
+    Jade b = other;
+    std::unique_ptr<uint64_t[]> sh = std::make_unique<uint64_t[]>(ndims);
     if (this->ndims == 1){
-        sh[0] = 1;
-        sh[1] = shape[0];
-        Jade THIS (dtype, 0, sh.get(), (uint64_t)2);
-        ths = THIS;
+        a.reshape(1, shape[0]);
     }
-    else ths =
     if (other.ndims == 1){
-        sh[0] = 1;
-        sh[1] = other.shape[0];
-        Jade OTHER (dtype, 0, sh.get(), (uint64_t)2);
+        b.reshape(shape[0], 1);
     }
-    auto& ths = (this->ndims == 1)? THIS : *this;
 
-    uint64_t M = (ths.ndims > 1) ? this->shape[this->ndims - 2] : 1;
-    uint64_t N = other.shape[other.ndims - 1];
-    uint64_t NA = this->ndims - 2;
-    uint64_t NB = other.ndims - 2;
+    uint64_t M = (a.ndims > 1) ? a.shape[a.ndims - 2] : 1;
+    uint64_t N = b.shape[b.ndims - 1];
+    uint64_t NA = a.ndims - 2;
+    uint64_t NB = b.ndims - 2;
     std::unique_ptr<uint64_t[]> batch_shape;
     uint64_t res = 0;
 
     if (NA > 0 || NB > 0) {
-        batch_shape = Jade::broadcast(this->shape.get(), NA, other.shape.get(), NB);
+        batch_shape = Jade::broadcast(a.shape.get(), NA, b.shape.get(), NB);
         res = std::max(NA, NB);
     }
     uint64_t N_OUT = res + 2;
@@ -92,6 +86,7 @@ Jade Jade::operator*(const Jade &other) const{
 
     Jade view(this->dtype, 0.0f, output_shape.get(), N_OUT);
     Dispatcher::execute_binary(OpCode::MATMUL, view, *this, other);
+    view.init_metadata_like(output_shape.get());
     return view;
 }
 

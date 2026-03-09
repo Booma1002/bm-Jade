@@ -70,15 +70,24 @@ void phase_math() {
     Jade a = Jade::array(DType::FLOAT64, 4) = {1, 2, 3, 4};
     Jade b = Jade::array(DType::FLOAT64, 4) = {10, 20, 30, 40};
 
+    // ping
     Jade c = a + b;
     chk_v(c.get(3), 44.0);
-
+    // ping
     Jade d = b - a;
     chk_v(d.get(0), 9.0);
 
-    Jade e = a * b;
+    // ping
+    Jade e = a.transpose() * b;
+    a.display();
+    std::cout << "a\n";
+    b.display();
+    std::cout << "b\n";
+    e.display();
+    std::cout << "E\n";
     chk_v(e.get(2), 90.0);
 
+    // ping
     Jade f = a + 5.0;
     chk_v(f.get(0), 6.0);
 
@@ -256,25 +265,22 @@ void phase_stress() {
 }
 
 int main() {
-//    std::cout << "IGNITION\n";
-//    auto t1 = std::chrono::high_resolution_clock::now();
-//
-//    phase_factories();
-//    phase_math();
-//    phase_reductions();
-//    phase_broadcasting();
-//    phase_matmul();
-//    phase_transformations();
-//    phase_mutation();
-//    phase_stress();
-//
-//    auto t2 = std::chrono::high_resolution_clock::now();
-//    std::chrono::duration<double> diff = t2 - t1;
-//    std::cout << "TERMINATED " << diff.count() << "s\n";
+    std::cout << "IGNITION\n";
+    auto t1 = std::chrono::high_resolution_clock::now();
 
-    Jade a(DType::FLOAT64, 7, 3);
-    Jade b(DType::FLOAT64, 4, 3, 1);
-    Jade c = a * b;
-    std::cout << c.display() << std::endl;
+    phase_factories();
+    phase_math();
+    phase_reductions();
+    phase_broadcasting();
+    phase_matmul();
+    phase_transformations();
+    phase_mutation();
+    phase_stress();
+
+    auto t2 = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> diff = t2 - t1;
+    std::cout << "TERMINATED " << diff.count() << "s\n";
+
+
     return 0;
 }
