@@ -289,6 +289,7 @@ namespace bm {
      */
         Jade operator*(const Jade &other) const;
         Jade operator*(const double &val) const;
+        Jade matmul(const Jade& other) const;
 
         /**
      * @brief In-place element-wise multiplication.

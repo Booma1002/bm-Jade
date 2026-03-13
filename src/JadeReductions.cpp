@@ -43,7 +43,12 @@ Jade Jade::mean(const Jade& input, std::initializer_list<uint64_t> axes) {
 }
 
 Jade Jade::dot(const Jade& other) const {
-    return *this *other;
+    if (this->ndims != 1 || other.ndims != 1 || this->shape[0] != other.shape[0]) {
+        throw ShapeMismatchException("Dot product requires two 1D tensors of identical size.");
+    }
+    Jade view(this->dtype, 0.0f, nullptr, 0);
+    Dispatcher::execute_binary(OpCode::DOT, view, *this, other);
+    return view;
 }
 
 Jade Jade::argmax(const Jade& input, std::initializer_list<uint64_t> axes) {

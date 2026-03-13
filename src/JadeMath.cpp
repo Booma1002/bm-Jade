@@ -49,7 +49,7 @@ Jade& Jade::operator=(const Jade& other) &&{
     return *this;
 }
 
-Jade Jade::operator*(const Jade &other) const{
+Jade Jade::matmul(const Jade& other) const {
     if(!Jade::can_matmul(const_cast<Jade &>(*this), const_cast<Jade &>(other))){
         std::string msg = "Cannot Apply MatMul: " + this->repr() + " @ " + other.repr();
         LOG_ERR(msg);
@@ -90,6 +90,13 @@ Jade Jade::operator*(const Jade &other) const{
     return view;
 }
 
+Jade Jade::operator*(const Jade& other) const {
+    uint64_t max_dims = std::max(this->ndims, other.ndims);
+    auto out_shape = Jade::broadcast(*this, other);
+    Jade view(this->dtype, 0.0f, out_shape.get(), max_dims);
+    Dispatcher::execute_binary(OpCode::MUL, view, *this, other);
+    return view;
+}
 
 
 Jade Jade::operator+(const double & val) const {
