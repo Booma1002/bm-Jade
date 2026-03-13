@@ -46,7 +46,7 @@ Jade Jade::dot(const Jade& other) const {
     if (this->ndims != 1 || other.ndims != 1 || this->shape[0] != other.shape[0]) {
         throw ShapeMismatchException("Dot product requires two 1D tensors of identical size.");
     }
-    Jade view(this->dtype, 0.0f, static_cast<uint64_t*>(nullptr), 0);
+    Jade view(this->dtype, 0.0f, static_cast<uint64_t*>(nullptr), static_cast<uint64_t>(0));
     Dispatcher::execute_binary(OpCode::DOT, view, *this, other);
     return view;
 }

@@ -6755,3 +6755,261 @@
   -> DEBUG : 72
 ==================================================
 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x6] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x1] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x4] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x3] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x5] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x2] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x7] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x8] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x9] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0xa] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0xb] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0xc] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0xd] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0xe] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x15] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0xf] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x10] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x11] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x12] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x13] on Dev[0x1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Registry] Registered Kernel: Op[0x14] on Dev[0x1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 10016 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 10016 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"3D", 64-bit; 10016Bytes> (10,10,10)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x10
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 256 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 256 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (5, 5) --> Shape (25).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 256Bytes> (5,5)} Filled with 1.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0xf
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 512 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 512 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 512Bytes> (50)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Unary Reactor] Shape (50) --> Shape (50).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Unary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Unary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reaction: OpCode=0xd
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 100000 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 100000 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 100000Bytes> (100,100)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 25024 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 25024 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 25024Bytes> (50,50)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x10
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x11
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 10016 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 10016 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 10016Bytes> (1000)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x10
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x11
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 160 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 160 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (4, 4) --> Shape (16).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 160Bytes> (4,4)} Filled with 7.500000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0xf
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 25024 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 25024 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 25024Bytes> (50,50)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x10
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 100000 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 100000 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (100, 100) --> Shape (10000).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 100000Bytes> (100,100)} Filled with 1.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0xf
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 512 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 512 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (50) --> Shape (50).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 512Bytes> (50)} Filled with 3.140000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 32 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 32 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 32Bytes> (1)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Unary Reduction Reaction: OpCode=0x10
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"2D", 64-bit; 64Bytes> (2,3)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Binary Reactor] Shape (4) [+] Shape (4)  --> Shape (4).
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [CPU Invoker] Performing Contiguous Jade Binary Reaction. Reactor Ndims=1.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Binary Reaction: OpCode=0x6
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Binary Reactor] Shape (4) [+] Shape (4)  --> Shape (4).
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [CPU Invoker] Performing Contiguous Jade Binary Reaction. Reactor Ndims=1.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Binary Reaction: OpCode=0x1
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Transposed {Jade<"1D", 64-bit; 64Bytes> (4)} into {Jade<"1D", 64-bit; 64Bytes> (4)}.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 0.000000's.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Binary Reactor] Shape (4) [+] Shape (4)  --> Shape (4).
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [CPU Invoker] Performing Contiguous Jade Binary Reaction. Reactor Ndims=1.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Binary Reaction: OpCode=0x2
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (4) --> Shape (4).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 5.000000's.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Binary Reactor] Shape (4) [+] Shape (4)  --> Shape (4).
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [CPU Invoker] Performing Contiguous Jade Binary Reaction. Reactor Ndims=1.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Binary Reaction: OpCode=0x6
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (4) --> Shape (4).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 10.000000's.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Binary Reactor] Shape (4) [+] Shape (4)  --> Shape (4).
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [CPU Invoker] Performing Contiguous Jade Binary Reaction. Reactor Ndims=1.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Binary Reaction: OpCode=0x1
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Allocated Memory: fulfilled the requested 64 B. 
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Alloc: 64 B on Hardware[1]
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Scalar Reactor] Shape (4) --> Shape (4).
+
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Scalar Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Scalar Reaction: OpCode=0x5
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] New {Jade<"1D", 64-bit; 64Bytes> (4)} Filled with 2.000000's.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] Copied {Jade<"1D", 64-bit; 64Bytes> (4)} Into {Jade<"1D", 64-bit; 64Bytes> (4)}
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Binary Reactor] Shape (4) [+] Shape (4)  --> Shape (4).
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] New ndims: 1.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Binary Reactor] Saved Reactor Settings Successfully.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [CPU Invoker] Performing Contiguous Jade Binary Reaction. Reactor Ndims=1.
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [Dispatcher] Executed Binary Reaction: OpCode=0x2
+[2026-03-13 18:07:36] [DEBUG] [Thread 140126582900672] [CPU Allocator] Deallocated Memory.
+[2026-03-13 18:07:36] [INFO ] [Thread 140126582900672] [Storage] Storage Freed. 0B
+[2026-03-13 18:07:36] [ERROR] [Thread 140126582900672] /mnt/c/Users/Booma/CLionProjects/CppForML/examples/main.cpp:98 A!= B; FATAL
+
+==================================================
+[SYSTEM] Execution Terminated. Telemetry Summary:
+  -> FATAL : 0
+  -> ERROR : 1
+  -> WARN  : 0
+  -> INFO  : 148
+  -> DEBUG : 91
+==================================================
+

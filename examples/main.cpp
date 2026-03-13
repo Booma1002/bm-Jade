@@ -87,11 +87,17 @@ void phase_math() {
     std::cout << "E\n";
     chk_v(e.get(2), 90.0);
 
+
     // ping
     Jade f = a + 5.0;
+
+    f.display();
+    std::cout << "f\n";
     chk_v(f.get(0), 6.0);
 
     Jade g = b - 10.0;
+    g.display();
+    std::cout << "g\n";
     chk_v(g.get(1), 10.0);
 
     Jade h = a * 2.0;
