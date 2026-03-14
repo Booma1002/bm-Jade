@@ -9,6 +9,7 @@
 #include <vector>
 #include <type_traits>
 #include <functional>
+#include <unordered_set>
 
 namespace bm {
     ////////////////////////////////////////////////////////////
@@ -137,12 +138,16 @@ namespace bm {
         uint64_t offset=0;
         DType dtype = DType::NONE;
 
-        // autograd metadata
+        // vein metadata
         std::shared_ptr<Vein> vein;
         Jade grad() const;
-
+        void backward();
 
     private:
+        void form_veining(std::vector<std::shared_ptr<Vein>>& veining,
+                          std::unordered_set<std::shared_ptr<Vein>>& traversed,
+                          const std::shared_ptr<Vein>& vein) const;
+
         friend struct JadeReactor;
         std::shared_ptr<Storage> memory;
     public:
@@ -790,6 +795,7 @@ namespace bm {
     * @example `{Jade\<"2D", 32-bit; 64Bytes> (4,4)}`
     */
         [[nodiscard]] std::string repr() const;
+
     };
 
 }// namespace bm

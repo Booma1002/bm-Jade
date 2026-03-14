@@ -143,6 +143,31 @@ namespace bm{
 
     template<typename... Args>
     void Dispatcher::execute_backward_binary(OpCode fwd_op, Jade a, Jade b, Vein* out_vein) {
+        if (fwd_op == OpCode::MATMUL) {
+            Jade dC = out_vein->grad;
+
+            // dA = dC @ B.T
+            if (a.vein && a.vein->requires_grad) {
+                Jade dA = dC.matmul(b.transpose());
+                a.vein->grad += dA;
+            }
+
+            // dB = A.T @ dC
+            if (b.vein && b.vein->requires_grad) {
+                Jade dB = a.transpose().matmul(dC);
+                b.vein->grad += dB;
+            }
+        }
+        else if (fwd_op == OpCode::ADD) {
+            // d(A+B)/dA = 1. d(A+B)/dB = 1.
+            if (a.vein && a.vein->requires_grad) a.vein->grad += out_vein->grad;
+            if (b.vein && b.vein->requires_grad) b.vein->grad += out_vein->grad;
+        }
+        else if (fwd_op == OpCode::MUL) {
+            // d(A*B)/dA = B. d(A*B)/dB = A.
+            if (a.vein && a.vein->requires_grad) a.vein->grad += (b * out_vein->grad);
+            if (b.vein && b.vein->requires_grad) b.vein->grad += (a * out_vein->grad);
+        }
         LOG_DEBUG(std::format("[Dispatcher] Routing Backward Binary: FwdOpCode={:#x}", static_cast<int>(fwd_op)));
     }
 
